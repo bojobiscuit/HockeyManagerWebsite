@@ -1,0 +1,11 @@
+Control Panel
+- Update Player
+- Point Tasks
+    - Available Point Tasks
+    - Point History
+- Bank
+    - Bank History
+    - Submit Transaction Request
+- Media
+    - View/Edit Submissions
+    - Create New Submission
