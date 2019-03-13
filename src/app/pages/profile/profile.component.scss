@@ -1,4 +1,6 @@
-#playerAttributes td:nth-child(2),
-#playerAttributes td:nth-child(3) {
+.profileTable td:nth-child(1) {
     text-align: right;
+}
+.profileTable td:nth-child(2) {
+    width: 100%;
 }
