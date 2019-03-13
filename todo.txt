@@ -9,3 +9,22 @@ Control Panel
 - Media
     - View/Edit Submissions
     - Create New Submission
+
+
+Profile
+    - Player Info
+        - Image
+        - Name
+        - Team
+        - Season Drafted
+    
+    - Player Attributes
+
+    - Bank
+        - Balance
+        - Last Transaction
+
+    - Update
+        - Total Points
+        - Points Available
+        - Last Update Date
