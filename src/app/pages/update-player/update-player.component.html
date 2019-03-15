@@ -1,8 +1,16 @@
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col">
+    <div class="alert alert-success" role="alert">
+      Update Submitted Successfully!
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-lg-4">
     <div class="bg-light p-3">
       <h4>Attributes</h4>
-      <table id="editPlayerAttributes" class="table table-sm table-borderless profileTable m-0">
+      <table id="editPlayerAttributes" class="table table-sm table-borderless currentUpdateTable m-0">
         <tbody>
           <tr>
             <td><input type="number" value="43" min="43" /></td>
@@ -56,13 +64,39 @@
       </table>
     </div>
   </div>
-  <div class="col-sm-6">
-    <div class="bg-light p-3">
+  <div class="col-sm-6 col-lg-3 mt-3 mt-sm-0">
+    <div class="bg-light p-3 text-center">
       <p>
         <span>11 points available</span><br />
         <span>0 points used</span><br />
       </p>
       <input class="btn btn-primary" type="button" value="Submit Update">
+    </div>
+  </div>
+  <div class="col-lg-5 mt-3 mt-lg-0">
+    <div class="bg-light p-3">
+      <h4>Current Update Submitted</h4>
+      <table class="table table-borderless table-sm currentSubmittedTable mb-2">
+        <tr>
+          <th>Attribute</th>
+          <th>Old</th>
+          <th>New</th>
+          <th>Pts</th>
+        </tr>
+        <tr>
+          <td>Checking</td>
+          <td>43</td>
+          <td>45</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Puck Handling</td>
+          <td>71</td>
+          <td>75</td>
+          <td>16</td>
+        </tr>
+      </table>
+      <input class="btn btn-secondary" type="button" value="Remove Update">
     </div>
   </div>
 </div>

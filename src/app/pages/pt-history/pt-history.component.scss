@@ -1,0 +1,10 @@
+.ptHistoryTable {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.ptHistoryTable th:nth-child(1),
+.ptHistoryTable td:nth-child(1) {
+    text-align: left;
+    width: 100%;
+}
