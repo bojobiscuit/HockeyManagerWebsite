@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', component: ProfileComponent },
   { path: 'pt/history', component: PtHistoryComponent },
   { path: 'pt/active', component: PtActiveComponent },
-  { path: 'bank/history', component: BankHistoryComponent },
+  { path: 'bank', component: BankHistoryComponent },
   { path: 'bank/submit', component: BankSubmitComponent },
   { path: 'updateplayer', component: UpdatePlayerComponent },
 ];
