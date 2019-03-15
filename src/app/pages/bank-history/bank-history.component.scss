@@ -1,0 +1,23 @@
+.bankHistoryTable {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.bankHistoryTable th:nth-child(1),
+.bankHistoryTable td:nth-child(1) {
+    text-align: left;
+    width: 100%;
+}
+
+.bankHistoryTable th:nth-child(3),
+.bankHistoryTable td:nth-child(3) {
+    font-weight: bold;
+}
+
+.negative {
+    color: #b83c3c;
+}
+
+.positive {
+    color: #41b841;
+}

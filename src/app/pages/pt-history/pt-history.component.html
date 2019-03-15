@@ -1,28 +1,23 @@
-<div class="row">
-  <div class="col-lg-4 mb-3">
+<div class="row justify-content-center">
+  <div class="col-lg-6">
     <div class="bg-light p-3">
-      <div class="input-group">
+      <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <button class="btn btn-secondary" type="button">Prev</button>
+          <button class="btn btn-outline-secondary" type="button">Prev</button>
         </div>
         <select class="custom-select" id="updateDateDropdown">
-            <option value="0" selected>Current</option>
-            <option value="1">3/15/19</option>
-            <option value="2">3/8/19</option>
+          <option value="0" selected>Current</option>
+          <option value="1">3/15/19</option>
+          <option value="2">3/8/19</option>
           <option value="3">3/2/19</option>
         </select>
         <div class="input-group-append">
-          <button class="btn btn-secondary" type="button">Next</button>
+          <button class="btn btn-outline-secondary" type="button">Next</button>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="col-lg-8">
-    <div class="bg-light p-3">
-      <h4 class="mb-3">Update - Current</h4>
       <table class="table table-borderless ptHistoryTable m-0">
         <thead>
-          <tr>
+          <tr class="border-bottom">
             <th>Name</th>
             <th>Points</th>
             <th>Capped</th>
@@ -34,7 +29,24 @@
             <td>2</td>
             <td>-</td>
           </tr>
+          <tr>
+            <td>Weekly Training</td>
+            <td>5</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>PT 3: Flerp a Derp</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
         </tbody>
+        <tfoot>
+          <tr class="border-top">
+            <th></th>
+            <th>10</th>
+            <th>3</th>
+          </tr>
+        </tfoot>
       </table>
     </div>
   </div>
