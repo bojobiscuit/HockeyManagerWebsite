@@ -33,4 +33,4 @@ Profile
 Notes:
 - Trainings/Equipment can't be canceled. Otherwise updates could be using more points than available.
 - Simmer will have to "finalize" updates before weekly updates.
-- 
+- How to log in with forum users, and should we have a users table as well
