@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BankSubmitComponent } from './bank-submit.component';
+import { PagniationComponent } from './pagniation.component';
 
-describe('BankSubmitComponent', () => {
-  let component: BankSubmitComponent;
-  let fixture: ComponentFixture<BankSubmitComponent>;
+describe('PagniationComponent', () => {
+  let component: PagniationComponent;
+  let fixture: ComponentFixture<PagniationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BankSubmitComponent ]
+      declarations: [ PagniationComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BankSubmitComponent);
+    fixture = TestBed.createComponent(PagniationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

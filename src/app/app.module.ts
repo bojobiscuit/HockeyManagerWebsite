@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { PtActiveComponent } from './pages/pt-active/pt-active.component';
 import { PtHistoryComponent } from './pages/pt-history/pt-history.component';
-import { BankSubmitComponent } from './pages/bank-submit/bank-submit.component';
-import { BankHistoryComponent } from './pages/bank-history/bank-history.component';
+import { BankComponent } from './pages/bank/bank.component';
 import { UpdatePlayerComponent } from './pages/update-player/update-player.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { PagniationComponent } from './common/pagniation/pagniation.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +18,11 @@ import { FooterComponent } from './common/footer/footer.component';
     ProfileComponent,
     PtActiveComponent,
     PtHistoryComponent,
-    BankSubmitComponent,
-    BankHistoryComponent,
+    BankComponent,
     UpdatePlayerComponent,
     NavbarComponent,
     FooterComponent,
+    PagniationComponent,
   ],
   imports: [
     BrowserModule,
