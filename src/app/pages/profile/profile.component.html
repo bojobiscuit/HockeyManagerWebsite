@@ -13,24 +13,10 @@
   </div>
   <div class="col-md-4">
     <div class="bg-light p-3">
-      <h4>Points</h4>
-      <table id="bankInformation" class="table table-sm table-borderless profileTable m-0">
-        <tbody>
-          <tr>
-            <td>{{profile.pointsTotal}}</td>
-            <td>Total</td>
-          </tr>
-          <tr>
-            <td>{{profile.pointsAvailable}}</td>
-            <td>Available</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="bg-light p-3 mt-4">
-      <h4>Balance</h4>
-      <div class="p-1">
-        <span id="bankBalance">{{profile.bankBalance}}</span><br />
+      <div class="text-center">
+        <span><strong>{{profile.pointsTotal}}</strong> Total Points</span><br />
+        <span><strong>{{profile.pointsAvailable}}</strong> Unused Points</span><br />
+        <span id="bankBalance"><strong>{{profile.bankBalance | currency : 'USD' : 'symbol' : '1.0'}}</strong></span><br />
       </div>
     </div>
   </div>

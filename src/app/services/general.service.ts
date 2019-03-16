@@ -77,9 +77,9 @@ export class GeneralService {
     var dto = new BankDto;
     dto.bankBalance = 69000000;
     dto.historyItems = [
-      { name: "Weekly Training", date: "3/10/19", amount: 1000000 },
-      { name: "Weekly Training", date: "3/10/19", amount: 500000 },
-      { name: "Weekly Training", date: "3/10/19", amount: 1000000 },
+      { name: "Weekly Training", date: "3/10/19", amount: -1000000 },
+      { name: "Weekly Training", date: "3/10/19", amount: -500000 },
+      { name: "Weekly Training", date: "3/10/19", amount: -1000000 },
       { name: "Bank Manager", date: "3/1/19", amount: 4000000 },
     ];
     dto.pagination = new Pagination;
@@ -118,7 +118,7 @@ export class GeneralService {
     var dto = new PtActiveDto;
     dto.pointTasks = [ "PT3: Flerp McDerp", "Milestones" ];
     dto.activityCheckNumber = 255;
-    dto.activityCheckComplete = false;
+    dto.activityCheckComplete = true;
     dto.trainingDate = "3/11";
     dto.trainingOptions = [ "5 points", "3 points", "1 point" ];
     dto.trainingComplete = false;

@@ -5,6 +5,9 @@
       <div class="list-group">
         <a *ngFor="let pt of ptActive.pointTasks" href="#" class="list-group-item list-group-item-action">{{pt}}</a>
       </div>
+      <p *ngIf="ptActive.pointTasks.length == 0" class="text-center mb-0">
+        No tasks currently available
+      </p>
     </div>
   </div>
   <div class="col-md-6">
@@ -13,12 +16,18 @@
       <div class="list-group">
         <a *ngIf="!ptActive.activityCheckComplete" href="#" class="list-group-item list-group-item-action">Check!</a>
       </div>
+      <p *ngIf="ptActive.activityCheckComplete" class="text-center mb-0">
+        Activity Check complete for the week!
+      </p>
     </div>
     <div class="bg-light text-center p-3 mb-3">
       <h4>Training: {{ptActive.trainingDate}}</h4>
-      <div class="list-group" *ngIf="!trainingComplete">
+      <div class="list-group" *ngIf="!ptActive.trainingComplete">
         <a *ngFor="let training of ptActive.trainingOptions" href="#" class="list-group-item list-group-item-action">{{training}}</a>
       </div>
+      <p *ngIf="ptActive.trainingComplete" class="text-center mb-0">
+        Training complete for the week!
+      </p>
     </div>
   </div>
 </div>

@@ -3,7 +3,7 @@
     <div class="bg-light p-3 mb-4">
       <h4>Balance</h4>
       <div class="p-1">
-        <span id="bankBalance">{{bank.bankBalance}}</span><br />
+        <span id="bankBalance"><strong>{{bank.bankBalance | currency : 'USD' : 'symbol' : '1.0'}}</strong></span><br />
       </div>
     </div>
     <div class="bg-light p-3 mb-3">
@@ -27,7 +27,7 @@
         <tr *ngFor="let item of bank.historyItems">
           <td>{{item.name}}</td>
           <td>{{item.date}}</td>
-          <td>{{item.amount}}</td>
+          <td [class.negative]="item.amount < 0" [class.positive]="item.amount > 0">{{item.amount | currency : 'USD' : 'symbol' : '1.0'}}</td>
         </tr>
       </table>
       <pagniation (pagination)="bank.pagination"></pagniation>
