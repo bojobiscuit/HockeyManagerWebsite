@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneralService } from 'src/app/services/general.service';
+import { PtActiveDto } from 'src/app/dtos/pt-active-dto';
 
 @Component({
   selector: 'app-pt-active',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PtActiveComponent implements OnInit {
 
-  constructor() { }
+  ptActive: PtActiveDto;
+
+  constructor(private genService: GeneralService) { }
 
   ngOnInit() {
+    this.ptActive = this.genService.getPtActiveDto();
   }
-
 }

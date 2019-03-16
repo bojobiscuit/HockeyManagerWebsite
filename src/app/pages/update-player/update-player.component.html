@@ -9,59 +9,15 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row" *ngIf="update">
   <div class="col-sm-6 col-lg-4">
     <div class="bg-light p-3">
       <h4>Attributes</h4>
-      <table id="editPlayerAttributes" class="table table-sm table-borderless currentUpdateTable m-0">
+      <table class="table table-sm table-borderless currentUpdateTable m-0">
         <tbody>
-          <tr>
-            <td><input type="number" value="43" min="43" /></td>
-            <td>Checking</td>
-          </tr>
-          <tr>
-            <td><input type="number" value="25" /></td>
-            <td>Fighting</td>
-          </tr>
-          <tr>
-            <td><input type="number" value="62" /></td>
-            <td>Discipline</td>
-          </tr>
-          <tr>
-            <td><input type="number" value="80" /></td>
-            <td>Skating</td>
-          </tr>
-          <tr>
-            <td><input type="number" value="57" /></td>
-            <td>Strength</td>
-          </tr>
-          <tr>
-            <td><input type="number" value="52" /></td>
-            <td>Endurance</td>
-          </tr>
-          <tr>
-            <td><input type="number" value="71" /></td>
-            <td>Puck Handling</td>
-          </tr>
-          <tr>
-            <td><input type="number" value="40" /></td>
-            <td>Face Offs</td>
-          </tr>
-          <tr>
-            <td><input type="number" value="75" /></td>
-            <td>Passing</td>
-          </tr>
-          <tr>
-            <td><input type="number" value="65" /></td>
-            <td>Scoring</td>
-          </tr>
-          <tr>
-            <td><input type="number" value="80" /></td>
-            <td>Defense</td>
-          </tr>
-          <tr>
-            <td><input type="number" value="40" /></td>
-            <td>Penalty Shot</td>
+          <tr *ngFor="let att of update.attributes">
+            <td><input type="number" [value]="att.attValue" [min]="att.attValue" /></td>
+            <td>{{att.attName}}</td>
           </tr>
         </tbody>
       </table>
@@ -70,8 +26,11 @@
   <div class="col-sm-6 col-lg-3 mt-3 mt-sm-0">
     <div class="bg-light p-3 text-center">
       <p>
-        <span>11 points available</span><br />
-        <span>0 points used</span><br />
+        <span>{{update.pointsTotal}} points total</span><br />
+        <span>{{update.pointsAvailable}} points available</span>
+      </p>
+      <p>
+        <span>{{pointsUsed}} points used</span>
       </p>
       <input class="btn btn-primary" type="button" value="Submit Update">
     </div>
@@ -86,23 +45,17 @@
           <th>New</th>
           <th>Pts</th>
         </tr>
-        <tr>
-          <td>Checking</td>
-          <td>43</td>
-          <td>45</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>Puck Handling</td>
-          <td>71</td>
-          <td>75</td>
-          <td>16</td>
+        <tr *ngFor="let att of update.submission.attributeUpdates">
+          <td>{{att.attName}}</td>
+          <td>{{att.attPrevValue}}</td>
+          <td>{{att.attNextValue}}</td>
+          <td>{{att.attCost}}</td>
         </tr>
         <tr class="border-top">
           <th></th>
           <th></th>
-          <th>6</th>
-          <th>18</th>
+          <th>{{update.submission.valueDifference}}</th>
+          <th>{{update.submission.cost}}</th>
         </tr>
       </table>
       <input class="btn btn-secondary" type="button" value="Remove Update">

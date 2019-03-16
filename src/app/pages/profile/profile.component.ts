@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneralService } from 'src/app/services/general.service';
+import { ProfileDto } from 'src/app/dtos/profileDto';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  profile: ProfileDto;
+
+  constructor(private genService: GeneralService) { }
 
   ngOnInit() {
+    this.profile = this.genService.getProfileDto();
   }
 
 }

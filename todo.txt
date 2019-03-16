@@ -34,3 +34,6 @@ Notes:
 - Trainings/Equipment can't be canceled. Otherwise updates could be using more points than available.
 - Simmer will have to "finalize" updates before weekly updates.
 - How to log in with forum users, and should we have a users table as well
+- Milestones will have to be confirmed by a PT grader, which I believe should be done anyway
+- Other TPE stuff like Equipment still needs to be figured out
+- trainings could start on the day after sim updates, so from tuesday-monday. prevents "double updates"

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PtHistoryDto } from 'src/app/dtos/pt-history-dto';
+import { GeneralService } from 'src/app/services/general.service';
 
 @Component({
   selector: 'app-pt-history',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PtHistoryComponent implements OnInit {
 
-  constructor() { }
+  ptHistory: PtHistoryDto;
+
+  constructor(private genService: GeneralService) { }
 
   ngOnInit() {
+    this.ptHistory = this.genService.getPtHistoryDto();
   }
-
 }

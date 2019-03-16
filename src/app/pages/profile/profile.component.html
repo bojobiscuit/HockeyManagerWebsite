@@ -1,13 +1,13 @@
-<div class="row">
+<div class="row" *ngIf="profile">
   <div class="col-md-4">
     <div class="bg-light text-center py-3">
       <img id="profileImage" src="../../../assets/img/placeholder.jpg" />
       <div id="profileInfo" class="mt-2">
-        <h4 id="playerName">Ray Borcey</h4>
-        <span id="playerType">Defender</span><br />
-        <span id="ArcheType">Defensive Defenseman</span><br />
-        <span id="teamName">West Kendall Platoon</span><br />
-        <span id="seasonDrafted">Season 44</span><br />
+        <h4>{{profile.playerName}}</h4>
+        <span>{{profile.playerPosition}}</span><br />
+        <span>{{profile.playerArchtype}}</span><br />
+        <span>{{profile.team}}</span><br />
+        <span>Season {{profile.draftSeason}}</span><br />
       </div>
     </div>
   </div>
@@ -17,11 +17,11 @@
       <table id="bankInformation" class="table table-sm table-borderless profileTable m-0">
         <tbody>
           <tr>
-            <td>1123</td>
+            <td>{{profile.pointsTotal}}</td>
             <td>Total</td>
           </tr>
           <tr>
-            <td>11</td>
+            <td>{{profile.pointsAvailable}}</td>
             <td>Available</td>
           </tr>
         </tbody>
@@ -30,7 +30,7 @@
     <div class="bg-light p-3 mt-4">
       <h4>Balance</h4>
       <div class="p-1">
-        <span id="bankBalance">$69,000,000</span><br />
+        <span id="bankBalance">{{profile.bankBalance}}</span><br />
       </div>
     </div>
   </div>
@@ -39,53 +39,9 @@
       <h4>Attributes</h4>
       <table id="playerAttributes" class="table table-sm table-borderless profileTable m-0">
         <tbody>
-          <tr>
-            <td>43</td>
-            <td>Checking</td>
-          </tr>
-          <tr>
-            <td>25</td>
-            <td>Fighting</td>
-          </tr>
-          <tr>
-            <td>62</td>
-            <td>Discipline</td>
-          </tr>
-          <tr>
-            <td>80</td>
-            <td>Skating</td>
-          </tr>
-          <tr>
-            <td>57</td>
-            <td>Strength</td>
-          </tr>
-          <tr>
-            <td>52</td>
-            <td>Endurance</td>
-          </tr>
-          <tr>
-            <td>71</td>
-            <td>Puck Handling</td>
-          </tr>
-          <tr>
-            <td>40</td>
-            <td>Face Offs</td>
-          </tr>
-          <tr>
-            <td>75</td>
-            <td>Passing</td>
-          </tr>
-          <tr>
-            <td>65</td>
-            <td>Scoring</td>
-          </tr>
-          <tr>
-            <td>80</td>
-            <td>Defense</td>
-          </tr>
-          <tr>
-            <td>40</td>
-            <td>Penalty Shot</td>
+          <tr *ngFor="let att of profile.attributes">
+            <td>{{att.attValue}}</td>
+            <td>{{att.attName}}</td>
           </tr>
         </tbody>
       </table>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UpdateDto } from 'src/app/dtos/update-dto';
+import { GeneralService } from 'src/app/services/general.service';
 
 @Component({
   selector: 'app-update-player',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdatePlayerComponent implements OnInit {
 
-  constructor() { }
+  update: UpdateDto;
+  pointsUsed: number = 0;
+
+  constructor(private genService: GeneralService) { }
 
   ngOnInit() {
+    this.update = this.genService.getUpdateDto();
   }
 
 }
